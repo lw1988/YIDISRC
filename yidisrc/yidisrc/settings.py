@@ -81,6 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'HOST':'127.0.0.1',
         'NAME': 'YIDISRC',
+        # 虚假DB连接信息
         'USER':'root',
         "PASSWORD":'123456',
         'PORT':3306,
