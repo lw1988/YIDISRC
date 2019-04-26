@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../../../WanZhuanDjango2/wwwroot/MyDjango/.idea/MyDjango.iml" filepath="$PROJECT_DIR$/../../../../WanZhuanDjango2/wwwroot/MyDjango/.idea/MyDjango.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../src/wwwroot/pahysrc/.idea/pahysrc.iml" filepath="$PROJECT_DIR$/../../../../src/wwwroot/pahysrc/.idea/pahysrc.iml" />
+      <module fileurl="file://$USER_HOME$/Documents/003_GitHub/python_lab/.idea/python_lab.iml" filepath="$USER_HOME$/Documents/003_GitHub/python_lab/.idea/python_lab.iml" />
+      <module fileurl="file://$USER_HOME$/Documents/001_Python/玩转Django2.0/sourceCode/.idea/sourceCode.iml" filepath="$USER_HOME$/Documents/001_Python/玩转Django2.0/sourceCode/.idea/sourceCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/yidisrc.iml" filepath="$PROJECT_DIR$/.idea/yidisrc.iml" />
+    </modules>
+  </component>
+</project>
