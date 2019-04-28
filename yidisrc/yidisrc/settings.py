@@ -74,6 +74,11 @@ WSGI_APPLICATION = 'yidisrc.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+'''
+创建数据库：
+create database if not exists YIDISRC character set utf8;
+
+'''
 DATABASES = {
     'default': {
         # 'ENGINE': 'django.db.backends.sqlite3',
