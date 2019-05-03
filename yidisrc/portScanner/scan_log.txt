@@ -1,0 +1,520 @@
+{
+	'nmap': {
+		'command_line': 'nmap -oX - -p 1-5000 -sV 14.152.59.124/29',
+		'scaninfo': {
+			'tcp': {
+				'method': 'connect',
+				'services': '1-5000'
+			}
+		},
+		'scanstats': {
+			'timestr': 'Fri May 3 00:49:42 2019',
+			'elapsed': '181.76',
+			'uphosts': '5',
+			'downhosts': '3',
+			'totalhosts': '8'
+		}
+	},
+	'scan': {
+		'14.152.59.121': {
+			'hostnames': [{
+				'name': '',
+				'type': ''
+			}],
+			'addresses': {
+				'ipv4': '14.152.59.121'
+			},
+			'vendor': {},
+			'status': {
+				'state': 'up',
+				'reason': 'syn-ack'
+			},
+			'tcp': {
+				80: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'http',
+					'product': 'nginx/1.13.9.1 Violet',
+					'version': '',
+					'extrainfo': '',
+					'conf': '10',
+					'cpe': ''
+				},
+				135: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'tcpwrapped',
+					'product': '',
+					'version': '',
+					'extrainfo': '',
+					'conf': '8',
+					'cpe': ''
+				},
+				139: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'netbios-ssn',
+					'product': '',
+					'version': '',
+					'extrainfo': '',
+					'conf': '3',
+					'cpe': ''
+				},
+				1538: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'msrpc',
+					'product': 'Microsoft Windows RPC',
+					'version': '',
+					'extrainfo': '',
+					'conf': '10',
+					'cpe': 'cpe:/o:microsoft:windows'
+				},
+				1539: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'msrpc',
+					'product': 'Microsoft Windows RPC',
+					'version': '',
+					'extrainfo': '',
+					'conf': '10',
+					'cpe': 'cpe:/o:microsoft:windows'
+				},
+				1547: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'msrpc',
+					'product': 'Microsoft Windows RPC',
+					'version': '',
+					'extrainfo': '',
+					'conf': '10',
+					'cpe': 'cpe:/o:microsoft:windows'
+				},
+				1947: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'http',
+					'product': 'Aladdin/SafeNet HASP license manager',
+					'version': '19.03',
+					'extrainfo': '',
+					'conf': '10',
+					'cpe': 'cpe:/o:microsoft:windows'
+				},
+				3000: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'ppp',
+					'product': '',
+					'version': '',
+					'extrainfo': '',
+					'conf': '3',
+					'cpe': ''
+				},
+				3389: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'ms-wbt-server',
+					'product': 'Microsoft Terminal Services',
+					'version': '',
+					'extrainfo': '',
+					'conf': '10',
+					'cpe': 'cpe:/o:microsoft:windows'
+				}
+			}
+		},
+		'14.152.59.123': {
+			'hostnames': [{
+				'name': '',
+				'type': ''
+			}],
+			'addresses': {
+				'ipv4': '14.152.59.123'
+			},
+			'vendor': {},
+			'status': {
+				'state': 'up',
+				'reason': 'syn-ack'
+			},
+			'tcp': {
+				80: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'http',
+					'product': 'Microsoft IIS httpd',
+					'version': '',
+					'extrainfo': '',
+					'conf': '10',
+					'cpe': 'cpe:/a:microsoft:iis'
+				},
+				443: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'http',
+					'product': 'Microsoft IIS httpd',
+					'version': '6.0',
+					'extrainfo': '',
+					'conf': '10',
+					'cpe': 'cpe:/o:microsoft:windows'
+				},
+				444: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'http',
+					'product': 'Microsoft IIS httpd',
+					'version': '6.0',
+					'extrainfo': '',
+					'conf': '10',
+					'cpe': 'cpe:/o:microsoft:windows'
+				},
+				445: {
+					'state': 'filtered',
+					'reason': 'no-response',
+					'name': 'microsoft-ds',
+					'product': '',
+					'version': '',
+					'extrainfo': '',
+					'conf': '3',
+					'cpe': ''
+				},
+				2022: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'tcpwrapped',
+					'product': '',
+					'version': '',
+					'extrainfo': '',
+					'conf': '8',
+					'cpe': ''
+				},
+				2023: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'ftp',
+					'product': 'Serv-U ftpd',
+					'version': '6.3',
+					'extrainfo': '',
+					'conf': '10',
+					'cpe': 'cpe:/o:microsoft:windows'
+				},
+				2024: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'tcpwrapped',
+					'product': '',
+					'version': '',
+					'extrainfo': '',
+					'conf': '8',
+					'cpe': ''
+				},
+				2025: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'tcpwrapped',
+					'product': '',
+					'version': '',
+					'extrainfo': '',
+					'conf': '8',
+					'cpe': ''
+				},
+				2026: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'tcpwrapped',
+					'product': '',
+					'version': '',
+					'extrainfo': '',
+					'conf': '8',
+					'cpe': ''
+				},
+				2027: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'tcpwrapped',
+					'product': '',
+					'version': '',
+					'extrainfo': '',
+					'conf': '8',
+					'cpe': ''
+				},
+				4444: {
+					'state': 'filtered',
+					'reason': 'no-response',
+					'name': 'krb524',
+					'product': '',
+					'version': '',
+					'extrainfo': '',
+					'conf': '3',
+					'cpe': ''
+				}
+			}
+		},
+		'14.152.59.124': {
+			'hostnames': [{
+				'name': '',
+				'type': ''
+			}],
+			'addresses': {
+				'ipv4': '14.152.59.124'
+			},
+			'vendor': {},
+			'status': {
+				'state': 'up',
+				'reason': 'syn-ack'
+			},
+			'tcp': {
+				80: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'http',
+					'product': 'Microsoft IIS httpd',
+					'version': '',
+					'extrainfo': '',
+					'conf': '10',
+					'cpe': 'cpe:/a:microsoft:iis'
+				},
+				135: {
+					'state': 'filtered',
+					'reason': 'no-response',
+					'name': 'msrpc',
+					'product': '',
+					'version': '',
+					'extrainfo': '',
+					'conf': '3',
+					'cpe': ''
+				},
+				445: {
+					'state': 'filtered',
+					'reason': 'no-response',
+					'name': 'microsoft-ds',
+					'product': '',
+					'version': '',
+					'extrainfo': '',
+					'conf': '3',
+					'cpe': ''
+				},
+				2122: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'ftp',
+					'product': 'Serv-U ftpd',
+					'version': '6.3',
+					'extrainfo': '',
+					'conf': '10',
+					'cpe': 'cpe:/o:microsoft:windows'
+				},
+				2123: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'tcpwrapped',
+					'product': '',
+					'version': '',
+					'extrainfo': '',
+					'conf': '8',
+					'cpe': ''
+				},
+				2124: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'tcpwrapped',
+					'product': '',
+					'version': '',
+					'extrainfo': '',
+					'conf': '8',
+					'cpe': ''
+				},
+				2125: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'tcpwrapped',
+					'product': '',
+					'version': '',
+					'extrainfo': '',
+					'conf': '8',
+					'cpe': ''
+				},
+				2126: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'tcpwrapped',
+					'product': '',
+					'version': '',
+					'extrainfo': '',
+					'conf': '8',
+					'cpe': ''
+				},
+				2127: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'tcpwrapped',
+					'product': '',
+					'version': '',
+					'extrainfo': '',
+					'conf': '8',
+					'cpe': ''
+				},
+				2128: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'tcpwrapped',
+					'product': '',
+					'version': '',
+					'extrainfo': '',
+					'conf': '8',
+					'cpe': ''
+				},
+				2129: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'tcpwrapped',
+					'product': '',
+					'version': '',
+					'extrainfo': '',
+					'conf': '8',
+					'cpe': ''
+				},
+				2130: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'tcpwrapped',
+					'product': '',
+					'version': '',
+					'extrainfo': '',
+					'conf': '8',
+					'cpe': ''
+				},
+				4444: {
+					'state': 'filtered',
+					'reason': 'no-response',
+					'name': 'krb524',
+					'product': '',
+					'version': '',
+					'extrainfo': '',
+					'conf': '3',
+					'cpe': ''
+				}
+			}
+		},
+		'14.152.59.125': {
+			'hostnames': [{
+				'name': '',
+				'type': ''
+			}],
+			'addresses': {
+				'ipv4': '14.152.59.125'
+			},
+			'vendor': {},
+			'status': {
+				'state': 'up',
+				'reason': 'conn-refused'
+			},
+			'tcp': {
+				22: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'ssh',
+					'product': '',
+					'version': '',
+					'extrainfo': 'protocol 2.0',
+					'conf': '10',
+					'cpe': ''
+				},
+				139: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'tcpwrapped',
+					'product': '',
+					'version': '',
+					'extrainfo': '',
+					'conf': '8',
+					'cpe': ''
+				},
+				443: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'http',
+					'product': 'nginx',
+					'version': '',
+					'extrainfo': '',
+					'conf': '10',
+					'cpe': 'cpe:/a:igor_sysoev:nginx'
+				},
+				445: {
+					'state': 'filtered',
+					'reason': 'no-response',
+					'name': 'microsoft-ds',
+					'product': '',
+					'version': '',
+					'extrainfo': '',
+					'conf': '3',
+					'cpe': ''
+				},
+				593: {
+					'state': 'filtered',
+					'reason': 'no-response',
+					'name': 'http-rpc-epmap',
+					'product': '',
+					'version': '',
+					'extrainfo': '',
+					'conf': '3',
+					'cpe': ''
+				},
+				1434: {
+					'state': 'filtered',
+					'reason': 'no-response',
+					'name': 'ms-sql-m',
+					'product': '',
+					'version': '',
+					'extrainfo': '',
+					'conf': '3',
+					'cpe': ''
+				},
+				4444: {
+					'state': 'filtered',
+					'reason': 'no-response',
+					'name': 'krb524',
+					'product': '',
+					'version': '',
+					'extrainfo': '',
+					'conf': '3',
+					'cpe': ''
+				}
+			}
+		},
+		'14.152.59.126': {
+			'hostnames': [{
+				'name': '',
+				'type': ''
+			}],
+			'addresses': {
+				'ipv4': '14.152.59.126'
+			},
+			'vendor': {},
+			'status': {
+				'state': 'up',
+				'reason': 'conn-refused'
+			},
+			'tcp': {
+				80: {
+					'state': 'closed',
+					'reason': 'conn-refused',
+					'name': 'http',
+					'product': '',
+					'version': '',
+					'extrainfo': '',
+					'conf': '3',
+					'cpe': ''
+				},
+				444: {
+					'state': 'open',
+					'reason': 'syn-ack',
+					'name': 'snpp',
+					'product': '',
+					'version': '',
+					'extrainfo': '',
+					'conf': '3',
+					'cpe': ''
+				}
+			}
+		}
+	}
+}
