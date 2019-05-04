@@ -9,7 +9,10 @@ def portscanner(request):
 
     if request.method == "GET":
 
-        return render(request, "portScanner/portScanner.html")  # 此处跳转到前端页面时需要使用双引号
+        data_from_db = PortScanner.objects.all()
+
+        # 此处跳转到前端页面时需要使用双引号
+        return render(request, "portScanner/portScanner.html",{"all_scan_result": data_from_db})
 
     elif request.method == "POST":
 
@@ -19,16 +22,20 @@ def portscanner(request):
 
         # 通过使用nmap.PortScanner()生成nmap对象，借用对象的scna方法执行nmap端口扫描
         nm = nmap.PortScanner()
-        ret = nm.scan(str(ip),str(port))
+        # ret = nm.scan(str(ip),str(port))
+        scan_result = nm.scan(hosts=ip, arguments='-p' + port)
 
-        for host in nm.all_hosts():
-            print('nm[host]---->',nm[host])
-            print('----------------------------------------------------')
-            print('Host : %s (%s)' % (host, nm[host].hostname()))
-            print('State : %s' % nm[host].state())
+        # 每次手动扫描前将上一次手动扫描的结果在数据表中清空
+        PortScanner.objects.all().delete()
 
-        # PortScanner.objects.create(ip_addres = )
+        # 将最新扫描结果入库
+        for host,result in scan_result['scan'].items():
+            if result['status']['state'] == 'up':
+                for scan_port in result['tcp']:
+                    print('主机：%s\t端口：%s\t状态:%s\t' % (host,str(scan_port),result['tcp'][scan_port]['state']))
+                    PortScanner.objects.create(ip_address = host,port_num = str(scan_port),port_status = result['tcp'][scan_port]['state'])
 
-        # 模板到前端渲染
+        # 取出最新扫描结果渲染到前端模板
+        data_from_db = PortScanner.objects.all()
         return render(request, "portScanner/portScanner.html",
-                      {"all_scan_result": ret})
+                      {"all_scan_result": data_from_db})
