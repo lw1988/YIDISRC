@@ -39,3 +39,9 @@ def portscanner(request):
         data_from_db = PortScanner.objects.all()
         return render(request, "portScanner/portScanner.html",
                       {"all_scan_result": data_from_db})
+
+# 自动扫描
+
+def autoportscanner(request):
+    return render(request, "portScanner/autoPortScanner.html",
+                  {"all_scan_result": "Hello world!!!"})
