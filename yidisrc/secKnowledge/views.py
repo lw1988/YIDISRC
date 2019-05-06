@@ -9,7 +9,10 @@ def webSecKnowledge(request):
     return render(request, "secKnowledge/secKnowledge.html")
 
 def appSecKnowledge(request):
-    return render(request, "secKnowledge/secKnowledge.html")
+
+    vul_data_from_db = SecKnowledge.objects.all()
+    return render(request, "secKnowledge/secKnowledge.html", {"data": vul_data_from_db})
+
 
 def editSecKnowledge(request):
 
@@ -52,3 +55,12 @@ def editSecKnowledge(request):
         vul_data_from_db = SecKnowledge.objects.all()
 
         return render(request, "secKnowledge/secKnowledge.html",{"data":vul_data_from_db})
+
+
+def pageEditSecKnowledge(request,myid):
+    print('hello world!!!!!')
+    print('id ----->',myid)
+
+    vul_data_from_db = SecKnowledge.objects.filter(id=myid)
+    print('vul_data_from_db ==== >',vul_data_from_db)
+    return render(request, "secKnowledge/secKnowledge.html", {"scan_data": vul_data_from_db})

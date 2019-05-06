@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path,re_path
 
 from . import views
 
@@ -7,4 +7,5 @@ urlpatterns = [
     path('web/', views.webSecKnowledge, name='webSecKnowledge'),
     path('app/', views.appSecKnowledge, name='appSecKnowledge'),
     path('app/editSecKnowledge/', views.editSecKnowledge, name='editSecKnowledge'),
+    re_path(r'app/(?P<myid>[0-9]{1})/',views.pageEditSecKnowledge)
 ]

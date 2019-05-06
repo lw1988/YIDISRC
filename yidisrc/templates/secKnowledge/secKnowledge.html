@@ -12,9 +12,6 @@
         }
     </style>
 
-    <script>
-        var id = "";
-    </script>
 {% endblock %}
 
 {% block content %}
@@ -40,50 +37,43 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-
-
-{% for j in data %}
                     <div class="col-xs-3">
                       <!-- required for floating -->
                       <!-- Nav tabs -->
-
                       <ul class="nav nav-tabs tabs-left">
                           {% for i in data %}
-                                <li class=""><a href="#{{ i.id }}" data-toggle="tab" aria-expanded="false">{{ i.vultitle }}</a></li>
+                                <li class=""><a href="{{ i.id }}" id="content_id" data-toggle="tab" aria-expanded="false">{{ i.vultitle }}</a></li>
                           {% endfor%}
                       </ul>
                     </div>
 
-                    <div class="col-xs-9">
-                      <!-- Tab panes -->
-                      <div class="tab-content">
-                        <div class="tab-pane active" id="{{ j.id }}">
-                            <p class="lead">漏洞描述</p>
-                            <p>{{ j.vuldesc }}</p>
-                            <hr>
-                            <p class="lead">漏洞成因</p>
-                            <p>{{ j.vulcause }}</p>
+                  {{ data }}
+{#                    {% for j in scan_data %}#}
+{#                            <div class="col-xs-9">#}
+{#                              <!-- Tab panes -->#}
+{#                              <div class="tab-content">#}
+{#                                <div class="tab-pane active" id="{{ scan_data.id }}">#}
+{#                                    <p class="lead">漏洞描述</p>#}
+{#                                    <p>{{ j.vuldesc }}</p>#}
+{#                                    <hr>#}
+{#                                    <p class="lead">漏洞成因</p>#}
+{#                                    <p>{{ j.vulcause }}</p>#}
+{##}
+{#                                    <hr>#}
+{#                                    <p class="lead">攻击方法</p>#}
+{#                                    <textarea class="comments" rows="15" cols="10">{{ j.attackmethod }}</textarea>#}
+{#                                </div>#}
+{#                                  <hr>#}
+{#                                  <p class="lead">解决方案及代码示例</p>#}
+{#                                    <textarea class="comments" rows="15" cols="10">{{ j.vulsolution }}</textarea>#}
+{##}
+{#                                  <hr>#}
+{#                                    <p class="lead">参考文档</p>#}
+{#                                    <p>{{ j.referdoc }}</p>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                    {% endfor %}#}
 
-                            <hr>
-                            <p class="lead">攻击方法</p>
-                            <textarea class="comments" rows="15" cols="10">{{ j.attackmethod }}</textarea>
-                        </div>
-                          <hr>
-                          <p class="lead">解决方案及代码示例</p>
-                            <textarea class="comments" rows="15" cols="10">{{ j.vulsolution }}</textarea>
-
-                          <hr>
-                            <p class="lead">参考文档</p>
-                            <p>{{ j.referdoc }}</p>
-                        </div>
-
-                      </div>
-
-
-
-
-                    </div>
-{% endfor %}
 
                     <div class="clearfix"></div>
 
