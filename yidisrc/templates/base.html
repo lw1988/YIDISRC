@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <!-- saved from url=(0050)https://colorlib.com/polygon/gentelella/index.html -->
-<html lang="en" class=" "><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en" class=" ">
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <!-- Meta, title, CSS, favicons, etc. -->
     
@@ -27,6 +30,10 @@
 
     <!-- Custom Theme Style -->
     <link href="/static/custom.min.css" rel="stylesheet">
+
+    {% block css %}
+    {% endblock %}
+
   </head>
 
   <body class="nav-md">
@@ -84,6 +91,13 @@
                   <li><a><i class="fa fa-edit"></i> Github扫描 <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="https://colorlib.com/polygon/gentelella/form_buttons.html">Github代码泄漏扫描</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-edit"></i> 安全知识库 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="/secKnowledge/common/">通用软件漏洞</a></li>
+                      <li><a href="/secKnowledge/web/">WEB常见漏洞</a></li>
+                      <li><a href="/secKnowledge/app/">APP常见漏洞</a></li>
                     </ul>
                   </li>
                 </ul>

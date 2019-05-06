@@ -23,4 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',base_view.base),    # 主页面访问
     path('portScanner/',include('portScanner.urls')),
+    path('secKnowledge/',include('secKnowledge.urls')),
 ]

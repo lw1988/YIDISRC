@@ -1,0 +1,94 @@
+{% extends "../base.html" %}
+
+
+{% block css %}
+    <style type="text/css">
+        .comments {
+         width:100%;/*自动适应父布局宽度*/
+         overflow:auto;
+         word-break:break-all;
+        /*在ie中解决断行问题(防止自动变为在一行显示，主要解决ie兼容问题，ie8中当设宽度为100%时，文本域类容超过一行时，
+        当我们双击文本内容就会自动变为一行显示，所以只能用ie的专有断行属性“word-break或word-wrap”控制其断行)*/
+        }
+    </style>
+
+    <script>
+        var id = "";
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div>
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2><a href="editSecKnowledge">内容编辑</a> <small>Float left</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="https://colorlib.com/polygon/gentelella/general_elements.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="https://colorlib.com/polygon/gentelella/general_elements.html#">Settings 1</a>
+                          </li>
+                          <li><a href="https://colorlib.com/polygon/gentelella/general_elements.html#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+
+
+{% for j in data %}
+                    <div class="col-xs-3">
+                      <!-- required for floating -->
+                      <!-- Nav tabs -->
+
+                      <ul class="nav nav-tabs tabs-left">
+                          {% for i in data %}
+                                <li class=""><a href="#{{ i.id }}" data-toggle="tab" aria-expanded="false">{{ i.vultitle }}</a></li>
+                          {% endfor%}
+                      </ul>
+                    </div>
+
+                    <div class="col-xs-9">
+                      <!-- Tab panes -->
+                      <div class="tab-content">
+                        <div class="tab-pane active" id="{{ j.id }}">
+                            <p class="lead">漏洞描述</p>
+                            <p>{{ j.vuldesc }}</p>
+                            <hr>
+                            <p class="lead">漏洞成因</p>
+                            <p>{{ j.vulcause }}</p>
+
+                            <hr>
+                            <p class="lead">攻击方法</p>
+                            <textarea class="comments" rows="15" cols="10">{{ j.attackmethod }}</textarea>
+                        </div>
+                          <hr>
+                          <p class="lead">解决方案及代码示例</p>
+                            <textarea class="comments" rows="15" cols="10">{{ j.vulsolution }}</textarea>
+
+                          <hr>
+                            <p class="lead">参考文档</p>
+                            <p>{{ j.referdoc }}</p>
+                        </div>
+
+                      </div>
+
+
+
+
+                    </div>
+{% endfor %}
+
+                    <div class="clearfix"></div>
+
+                  </div>
+                </div>
+              </div>
+
+{% endblock %}
