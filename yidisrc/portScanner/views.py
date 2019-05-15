@@ -105,7 +105,11 @@ def editautoportscanner(request):
         port_white_list = [22, 3389, 3306, 5432, 27017, 9200, 9300, 6379, 2181, 9092, 50070, 8088, 60010, 10000]
         port_white_list = eval(vul_portarea)
 
-        nmap_A_scan(network_prefix, scan_port, port_white_list)
+        # 用户在前端输入多个ip，ip之间需要用逗号分割开
+        ip_list = network_prefix.split(',')
+
+        for target_ip in ip_list:
+            nmap_A_scan(target_ip, scan_port, port_white_list)
 
         data_from_db = AutoPortScanner.objects.all()
         today = time.strftime('%Y-%m-%d', time.localtime())
