@@ -15,7 +15,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from portScanner import views
 from . import views as base_view
 
 
@@ -24,4 +23,5 @@ urlpatterns = [
     path('',base_view.base),    # 主页面访问
     path('portScanner/',include('portScanner.urls')),
     path('secKnowledge/',include('secKnowledge.urls')),
+    path('onlineTools/',include('onlineTools.urls')),
 ]

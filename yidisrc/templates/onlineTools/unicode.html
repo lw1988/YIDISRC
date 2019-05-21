@@ -1,0 +1,82 @@
+{% extends "../base.html" %}
+
+
+{% block css %}
+    <style type="text/css">
+        .comments {
+         width:100%;/*自动适应父布局宽度*/
+         overflow:auto;
+         word-break:break-all;
+        /*在ie中解决断行问题(防止自动变为在一行显示，主要解决ie兼容问题，ie8中当设宽度为100%时，文本域类容超过一行时，
+        当我们双击文本内容就会自动变为一行显示，所以只能用ie的专有断行属性“word-break或word-wrap”控制其断行)*/
+        }
+    </style>
+
+{% endblock %}
+
+{% block content %}
+
+<div>
+    <div class="clearfix"></div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="x_panel">
+          <div class="x_title">
+            <h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                unicode 转换工具</font></font><small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></small></h2>
+            <ul class="nav navbar-right panel_toolbox">
+              <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+              </li>
+              <li class="dropdown">
+                <a href="https://colorlib.com/polygon/gentelella/invoice.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="https://colorlib.com/polygon/gentelella/invoice.html#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">设置1</font></font></a>
+                  </li>
+                  <li><a href="https://colorlib.com/polygon/gentelella/invoice.html#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">设置2</font></font></a>
+                  </li>
+                </ul>
+              </li>
+              <li><a class="close-link"><i class="fa fa-close"></i></a>
+              </li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+          <div class="x_content">
+
+            <section class="content invoice">
+              <!-- title row -->
+              <div class="row">
+                  <div class="x_content">
+
+    <form class="form-horizontal form-label-left" novalidate="" method="post">
+
+      <p>For alternative validation library <code>parsleyJS</code> check out in the <a href="https://colorlib.com/polygon/gentelella/form.html">form page</a>
+      </p>
+      <span class="section">Personal Info</span>
+
+      <div class="item form-group">
+        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">unicode内容 <span class="required">*</span>
+        </label>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <textarea id="unicode_content" required="required" name="unicode_content" class="form-control col-md-7 col-xs-12"></textarea>
+        </div>
+      </div>
+      <div class="ln_solid"></div>
+      <div class="form-group">
+        <div class="col-md-6 col-md-offset-3">
+          <button type="submit" class="btn btn-primary">Cancel</button>
+          <button id="send" type="submit" class="btn btn-success">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+              </div>
+
+            </section>
+              {{ transfer_content }}
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock %}
