@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'portScanner',
     'secKnowledge',
     'onlineTools',
+    'vms',
 ]
 
 MIDDLEWARE = [

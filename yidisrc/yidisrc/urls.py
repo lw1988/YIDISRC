@@ -24,4 +24,5 @@ urlpatterns = [
     path('portScanner/',include('portScanner.urls')),
     path('secKnowledge/',include('secKnowledge.urls')),
     path('onlineTools/',include('onlineTools.urls')),
+    path('vms/',include('vms.urls')),
 ]
